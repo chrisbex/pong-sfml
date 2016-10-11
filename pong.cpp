@@ -24,6 +24,12 @@ int main()
         {
             if (event.type == sf::Event::Closed)
                 window.close();
+
+            if (event.type == sf::Event::MouseMoved)
+            {
+                _paddle1.setPosition(sf::Vector2f(5, event.mouseMove.y));
+                _paddle2.setPosition(sf::Vector2f(SCREEN_WIDTH - 15, event.mouseMove.y));
+            }
         }
 
        _ball.setPosition(_ball.getPosition() + _ball.getVelocity());

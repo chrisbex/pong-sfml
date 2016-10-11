@@ -25,6 +25,7 @@ Paddle::Paddle(sf::Vector2f pos)
 void Paddle::setPosition(sf::Vector2f pos)
 {
 	itsPosition = pos;
+	shape.setPosition(pos);
 }
 
 void Paddle::setColor(sf::Color color)
