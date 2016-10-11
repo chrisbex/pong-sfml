@@ -9,7 +9,10 @@ class Ball
 		sf::Color getColor();
 		void draw(sf::RenderWindow& win1);
 		sf::Vector2f getVelocity() { return itsVelocity; };
-		void setVelocity(sf::Vector2f x) { itsVelocity = x; };
+		float getVelocityX() { return itsVelocity.x; };
+		float getVelocityY() { return itsVelocity.y; };
+		void setVelocityX(float x) { itsVelocity.x = x; };
+		void setVelocityY(float y) { itsVelocity.y = y; };
 
 	private:
 		sf::Vector2f itsPosition;
@@ -24,7 +27,7 @@ Ball::Ball(sf::Vector2f pos)
 	shape.setPosition(pos);
 	shape.setRadius(10.f);
 	shape.setOutlineColor(sf::Color::Green);
-	itsVelocity = sf::Vector2f(-3, -3);
+	itsVelocity = sf::Vector2f(-10, -10);
 	itsPosition = pos;
 }
 
